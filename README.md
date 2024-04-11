@@ -6,7 +6,7 @@
   <h2>Contact</h2>
   <ul>
     <li>Telegram: <a href="https://t.me/TheDarkDeath788">@TheDarkDeath788</a></li>
-    <li>GitLab: <a href="https://gitlab.com/TDD788">TDD788</a></li>
+    <li>GitLab: <a href="https://gitlab.com/TheDarkDeath788">TDD788</a></li>
   </ul>
 
 <picture>
