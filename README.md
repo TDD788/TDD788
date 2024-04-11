@@ -1,16 +1,21 @@
-### Hi there 👋
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=TDD788&show_icons=true&theme=dark&include_all_commits=true&count_private=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR">
+  <img src="https://github-readme-stats.vercel.app/api?username=TDD788&show_icons=true&include_all_commits=true&count_private=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR" alt="GitHub Stats">
+</picture>
 
-<!--
-**TDD788/TDD788** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=TDD788&layout=compact&theme=dark&role=OWNER,ORGANIZATION_MEMBER&langs_count=10">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TDD788&layout=compact&theme=dark&role=OWNER,ORGANIZATION_MEMBER&langs_count=10" alt="Top Languages">
+</picture>
 
-Here are some ideas to get you started:
+<picture>
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=TDD788&repo=A12s-DevTree&theme=dark">
+</picture>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<picture>
+  <img src="https://github.com/TDD788/A12s-DevTree/actions/workflows/1-OrangeFox-Compiler.yml/badge.svg?style=for-the-badge&color=black&labelColor=white" alt="OrangeFox - Build">
+</picture>
+
+<picture>
+  <img src="https://github.com/TDD788/A12s-DevTree/actions/workflows/1-OrangeFox-Compiler.yml/badge.svg?style=for-the-badge&color=black&labelColor=white&event=release" alt="OrangeFox - Build">
+</picture>
