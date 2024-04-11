@@ -11,11 +11,3 @@
 <picture>
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=TDD788&repo=A12s-DevTree&theme=dark">
 </picture>
-
-<picture>
-  <img src="https://github.com/TDD788/A12s-DevTree/actions/workflows/1-OrangeFox-Compiler.yml/badge.svg?style=for-the-badge&color=black&labelColor=white" alt="OrangeFox - Build">
-</picture>
-
-<picture>
-  <img src="https://github.com/TDD788/A12s-DevTree/actions/workflows/1-OrangeFox-Compiler.yml/badge.svg?style=for-the-badge&color=black&labelColor=white&event=release" alt="OrangeFox - Build">
-</picture>
