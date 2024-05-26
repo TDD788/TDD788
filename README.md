@@ -17,17 +17,18 @@
   </ul>
 
   <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=TDD788&show_icons=true&theme=dark&role=OWNER,COLLABORATOR">
-  <img src="https://github-readme-stats.vercel.app/api?username=TDD788&show_icons=true&role=OWNER,COLLABORATOR&bg_color=000000&title_color=ffffff&icon_color=ffffff&text_color=ffffff&border_color=ffffff" alt="GitHub Stats">
-</picture>
-
+    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TDD788&theme=dark">
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TDD788&theme=minimal" alt="Profile Details">
+  </picture>
+  
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=TDD788&layout=compact&theme=dark&role=OWNER,ORGANIZATION_MEMBER&langs_count=10">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TDD788&layout=compact&theme=dark&role=OWNER,ORGANIZATION_MEMBER&langs_count=10" alt="Top Languages">
+    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=TDD788&theme=dark">
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=TDD788&theme=minimal" alt="GitHub Stats">
   </picture>
 
   <picture>
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=TDD788&repo=A12s-DevTree&theme=dark">
+    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TDD788&theme=dark">
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TDD788&theme=minimal" alt="Top Languages">
   </picture>
 </body>
 </html>
