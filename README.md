@@ -10,6 +10,9 @@
   <a href="https://twitter.com/TheDarkDeath788">
     <img src="https://img.shields.io/badge/Twitter/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter Badge"/>
   </a>
+  <a href="https://gitlab.com/TheDarkDeath788">
+    <img src="https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab Badge"/>
+  </a>
   <a href="https://discord.com/users/TheDarkDeath788">
     <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Badge"/>
   </a>
