@@ -41,19 +41,19 @@
     <li>GitLab: <a href="https://gitlab.com/TheDarkDeath788">TDD788</a></li>
   </ul>
 
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TDD788&theme=dark">
-    <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TDD788&theme=minimal" alt="Profile Details">
-  </picture>
-  
-  <picture>
+  <div class="inline-pictures">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TDD788&theme=dark">
+      <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TDD788&theme=minimal" alt="Profile Details">
+    </picture>
+<picture>
     <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=TDD788&theme=dark">
     <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=TDD788&theme=minimal" alt="GitHub Stats">
   </picture>
-
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TDD788&theme=dark">
     <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TDD788&theme=minimal" alt="Top Languages">
   </picture>
+  </div>
 </body>
 </html>
