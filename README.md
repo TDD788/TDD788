@@ -1,3 +1,23 @@
+<div id="header" align="center">
+  <img src="https://avatars.githubusercontent.com/u/103203291?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d?" width="100"/>
+  <h3>:wave: Hello! I am Dark</h3>
+</div>
+
+<div id="badges" align="center">
+  <a href="https://t.me/TheDarkDeath788">
+    <img src="https://img.shields.io/badge/Telegram-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Badge"/>
+  </a>
+  <a href="https://twitter.com/TheDarkDeath788">
+    <img src="https://img.shields.io/badge/Twitter/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter Badge"/>
+  </a>
+  <a href="https://discord.com/users/TheDarkDeath788">
+    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Badge"/>
+  </a>
+  <a href="https://xdaforums.com/m/thedarkdeath788.12239907">
+    <img src="https://img.shields.io/badge/XDA-f59714?style=for-the-badge&logo=xdadevelopers&logoColor=white" alt="Discord Badge"/>
+  </a>
+</div>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
