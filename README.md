@@ -1,59 +1,45 @@
-<div id="header" align="center">
-  <img src="https://avatars.githubusercontent.com/u/103203291?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d?" width="100"/>
-  <h3>:wave: Hello! I am Dark</h3>
-</div>
+<!-- The banner switches automatically with the visitor's GitHub theme:
+     dark theme → dark.svg  ·  light theme → light.svg -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dark.svg">
+  <img src="light.svg" alt="TheDarkDeath788 — sakura banner" width="100%">
+</picture>
 
-<div id="badges" align="center">
-  <a href="https://t.me/TheDarkDeath788">
-    <img src="https://img.shields.io/badge/Telegram-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Badge"/>
-  </a>
-  <a href="https://twitter.com/TheDarkDeath788">
-    <img src="https://img.shields.io/badge/Twitter/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter Badge"/>
-  </a>
-  <a href="https://gitlab.com/TheDarkDeath788">
-    <img src="https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab Badge"/>
-  </a>
-  <a href="https://discord.com/users/TheDarkDeath788">
-    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Badge"/>
-  </a>
-  <a href="https://xdaforums.com/m/thedarkdeath788.12239907">
-    <img src="https://img.shields.io/badge/XDA-f59714?style=for-the-badge&logo=xdadevelopers&logoColor=white" alt="Discord Badge"/>
-  </a>
+<div align="center">
+
+  <a href="https://t.me/TheDarkDeath788"><img src="https://img.shields.io/badge/Telegram-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/></a>
+  <a href="https://x.com/TheDarkDeath788"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/></a>
+  <a href="https://gitlab.com/TheDarkDeath788"><img src="https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab"/></a>
+  <a href="https://discord.com/users/TheDarkDeath788"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/></a>
+  <a href="https://xdaforums.com/m/thedarkdeath788.12239907"><img src="https://img.shields.io/badge/XDA-f59714?style=for-the-badge&logo=xdadevelopers&logoColor=white" alt="XDA"/></a>
+
 </div>
 
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <h1>TheDarkDeath788 (TDD788)</h1>
+### `guest@sakura:~$ whoami`
 
-  <h2>About Me</h2>
-  <p>Hello! I'm TheDarkDeath788, a passionate developer with experience in Bash, Makefile, and YAML. I love creating innovative solutions and constantly learning about new technologies.</p>
+**dark** · `@TDD788`
 
-  <h2>Contact</h2>
-  <ul>
-    <li>Telegram: <a href="https://t.me/TheDarkDeath788">@TheDarkDeath788</a></li>
-    <li>GitLab: <a href="https://gitlab.com/TheDarkDeath788">TDD788</a></li>
-  </ul>
+> *"crafting worlds in code and ink"*
 
-  <div class="inline-pictures">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TDD788&theme=dark">
-      <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TDD788&theme=minimal" alt="Profile Details">
-    </picture>
+```bash
+// building multi-agent AI systems
+// crafting generative art & retro worlds
+```
+
+### `$ ./stats`
+
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=TDD788&theme=dark">
-    <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=TDD788&theme=minimal" alt="GitHub Stats">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TDD788&theme=dark">
-    <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TDD788&theme=minimal" alt="Top Languages">
-  </picture>
-  </div>
-</body>
-</html>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TDD788&theme=tokyonight">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TDD788&theme=minimal" alt="Profile details" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TDD788&theme=tokyonight">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TDD788&theme=minimal" alt="GitHub stats" width="49%">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TDD788&theme=tokyonight">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TDD788&theme=minimal" alt="Top languages" width="49%">
+</picture>

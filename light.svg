@@ -1,0 +1,562 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="610" viewBox="0 0 1180 610" font-family="'SF Mono','Consolas','Menlo',monospace">
+
+  <defs>
+    <clipPath id="rounded"><rect x="0" y="0" width="1180" height="610" rx="28"/></clipPath>
+    <clipPath id="leftClip"><rect x="0" y="0" width="448" height="610"/></clipPath>
+
+    <!-- Shifting Accent Gradient for Name -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E11D48">
+        <animate attributeName="stop-color" values="#E11D48;#DB2777;#E11D48" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#DB2777">
+        <animate attributeName="stop-color" values="#DB2777;#D97706;#DB2777" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#D97706">
+        <animate attributeName="stop-color" values="#D97706;#E11D48;#D97706" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- ASCII Magenta/Crimson Shimmer Gradient for Light Theme -->
+    <linearGradient id="asciiGrad" gradientUnits="userSpaceOnUse" x1="-100" y1="0" x2="100" y2="0">
+      <stop offset="0%" stop-color="#DB2777"/>
+      <stop offset="50%" stop-color="#9D174D"/>
+      <stop offset="100%" stop-color="#DB2777"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        values="0 0; 180 0; 0 0" dur="10s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Border Shimmer Gradient -->
+    <linearGradient id="shimmerGrad" gradientUnits="userSpaceOnUse" x1="-400" y1="0" x2="-100" y2="0">
+      <stop offset="0%" stop-color="#E11D48" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#E11D48" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#E11D48" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        values="0 0; 3580 0" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Sun Glow & Ambient Orbs -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFBEB" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#FDE047" stop-opacity="0.5"/>
+      <stop offset="80%" stop-color="#FDE047" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FDF2F8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lanternGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDE047" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#E11D48" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#E11D48" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F472B6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#F472B6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDE047" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#FDE047" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="bigBlur" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="45"/>
+    </filter>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Dark noise for light theme -->
+    <filter id="noiseFilter" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0"/>
+    </filter>
+
+    <style>
+      * { vector-effect: non-scaling-stroke; }
+      .skill-text {
+        font-family: 'SFMono-Regular', 'SF Mono', 'Cascadia Code', 'JetBrains Mono', 'Consolas', 'Menlo', monospace;
+        font-variant-ligatures: none;
+      }
+    </style>
+
+    <!-- ==========================================
+         JAPANESE ASSETS (Mt Fuji, Clouds, Torii)
+         ========================================== -->
+    <g id="mtFuji">
+      <path d="M -220 150 Q -60 -10 0 -60 Q 60 -10 220 150 Z" fill="#A78BFA"/>
+      <!-- Snow cap -->
+      <path d="M -70 -5 Q -40 -35 0 -60 Q 40 -35 70 -5 Q 50 15 25 -5 Q 0 15 -25 -5 Q -50 15 -70 -5 Z" fill="#FFFFFF" opacity="0.9"/>
+    </g>
+
+    <g id="jpCloud">
+      <rect x="0" y="0" width="120" height="12" rx="6"/>
+      <rect x="25" y="10" width="140" height="12" rx="6"/>
+      <rect x="-15" y="20" width="90" height="12" rx="6"/>
+      <rect x="50" y="30" width="80" height="12" rx="6"/>
+    </g>
+
+    <g id="toriiGate">
+      <rect x="-35" y="0" width="8" height="70" fill="#BE185D"/>
+      <rect x="27" y="0" width="8" height="70" fill="#BE185D"/>
+      <path d="M -50 12 Q 0 5 50 12 L 50 20 Q 0 13 -50 20 Z" fill="#9D174D"/>
+      <rect x="-42" y="28" width="84" height="5" fill="#831843"/>
+      <rect x="-4" y="20" width="8" height="8" fill="#4C0519"/>
+    </g>
+
+    <g id="pagodaTemple">
+      <path d="M -40 80 L -30 40 L 30 40 L 40 80 Z" fill="#831843"/>
+      <path d="M -55 40 Q 0 48 55 40 L 45 30 L -45 30 Z" fill="#4C0519"/>
+      <path d="M -25 30 L -18 -5 L 18 -5 L 25 30 Z" fill="#831843"/>
+      <path d="M -40 -5 Q 0 2 40 -5 L 32 -14 L -32 -14 Z" fill="#4C0519"/>
+      <path d="M -12 -14 L -6 -45 L 6 -45 L 12 -14 Z" fill="#831843"/>
+      <path d="M -28 -45 Q 0 -39 28 -45 L 20 -53 L -20 -53 Z" fill="#4C0519"/>
+      <rect x="-2" y="-90" width="4" height="37" fill="#D97706" opacity="0.8"/>
+      <circle cx="0" cy="-92" r="4" fill="#D97706" opacity="0.9"/>
+    </g>
+
+    <g id="chochinLantern" transform="scale(0.9)">
+      <line x1="0" y1="-25" x2="0" y2="0" stroke="#4A1C2A" stroke-width="2"/>
+      <rect x="-12" y="0" width="24" height="5" fill="#4C0519" rx="2"/>
+      <rect x="-15" y="5" width="30" height="38" rx="8" fill="#E11D48"/>
+      <circle cx="0" cy="24" r="35" fill="url(#lanternGlow)"/>
+      <rect x="-12" y="43" width="24" height="5" fill="#4C0519" rx="2"/>
+      <path d="M -8 5 Q -14 24 -8 43 M 0 5 L 0 43 M 8 5 Q 14 24 8 43" fill="none" stroke="#BE185D" stroke-width="1.5"/>
+      <path d="M 0 48 L -4 62 M 0 48 L 0 65 M 0 48 L 4 62" fill="none" stroke="#E11D48" stroke-width="1.5"/>
+    </g>
+
+    <!-- ==========================================
+         DENSE SAKURA BRANCH SYSTEM
+         ========================================== -->
+    <g id="sakuraBloom">
+      <circle cx="0" cy="-4.5" r="3.4"/>
+      <circle cx="-4.0" cy="-1.5" r="3.2"/>
+      <circle cx="-2.5" cy="3.0" r="3.25"/>
+      <circle cx="2.5" cy="3.0" r="3.25"/>
+      <circle cx="4.0" cy="-1.5" r="3.2"/>
+      <circle cx="0" cy="0" r="1.8" fill="#FCE7F3"/>
+    </g>
+
+    <g id="sakuraBloomTiny">
+      <circle cx="0" cy="-4.5" r="3.4"/>
+      <circle cx="-4.0" cy="-1.5" r="3.2"/>
+      <circle cx="-2.5" cy="3.0" r="3.25"/>
+      <circle cx="2.5" cy="3.0" r="3.25"/>
+      <circle cx="4.0" cy="-1.5" r="3.2"/>
+      <circle cx="0" cy="0" r="1.8" fill="#FCE7F3"/>
+    </g>
+
+    <g id="sakuraClusterBig">
+      <!-- Shadow/Back Blossoms -->
+      <g fill="#9D174D" opacity="0.7">
+        <use href="#sakuraBloom" transform="translate(-16,-12) scale(1.3)"/>
+        <use href="#sakuraBloom" transform="translate(16,12) scale(1.4)"/>
+        <use href="#sakuraBloom" transform="translate(-6,18) scale(1.1)"/>
+        <use href="#sakuraBloom" transform="translate(22,-6) scale(1.2)"/>
+      </g>
+      <!-- Main Dense Pink Blossoms -->
+      <g fill="#F472B6" opacity="0.95">
+        <use href="#sakuraBloom" transform="translate(0,0) scale(1.6)"/>
+        <use href="#sakuraBloom" transform="translate(14,-14) scale(1.3)"/>
+        <use href="#sakuraBloom" transform="translate(-20,6) scale(1.4)"/>
+        <use href="#sakuraBloom" transform="translate(12,14) scale(1.2)"/>
+        <use href="#sakuraBloom" transform="translate(-12,-18) scale(1.1)"/>
+        <use href="#sakuraBloom" transform="translate(25,3) scale(1.0)"/>
+        <use href="#sakuraBloom" transform="translate(-3,20) scale(1.3)"/>
+        <use href="#sakuraBloom" transform="translate(-25,-8) scale(0.9)"/>
+      </g>
+      <!-- Light Front Highlights -->
+      <g fill="#FFFFFF" opacity="0.95">
+        <use href="#sakuraBloom" transform="translate(6,-6) scale(0.9)"/>
+        <use href="#sakuraBloom" transform="translate(-12,10) scale(0.8)"/>
+        <use href="#sakuraBloom" transform="translate(18,6) scale(0.7)"/>
+        <use href="#sakuraBloom" transform="translate(0,12) scale(0.8)"/>
+      </g>
+    </g>
+
+    <!-- A single thick, highly detailed branch -->
+    <g id="thickBranch">
+      <!-- Main trunk wood -->
+      <path d="M 200 -50 C 150 20 80 50 0 80 C -80 110 -150 120 -280 140" fill="none" stroke="#4A1C2A" stroke-width="26" stroke-linecap="round"/>
+      <!-- Split primary branches -->
+      <path d="M 150 -10 C 100 40 50 80 -20 120 C -80 160 -120 200 -200 240" fill="none" stroke="#4A1C2A" stroke-width="15" stroke-linecap="round"/>
+      <path d="M 50 60 C 20 90 -20 110 -60 160 C -90 190 -110 210 -160 270" fill="none" stroke="#4A1C2A" stroke-width="9" stroke-linecap="round"/>
+      <path d="M -80 110 C -120 100 -160 110 -220 100 C -260 95 -300 80 -360 60" fill="none" stroke="#4A1C2A" stroke-width="12" stroke-linecap="round"/>
+      <path d="M -150 128 C -190 150 -220 170 -260 180" fill="none" stroke="#4A1C2A" stroke-width="6" stroke-linecap="round"/>
+      <!-- Bark texture highlights -->
+      <path d="M 180 -30 C 130 30 60 60 -20 90" fill="none" stroke="#280F16" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 100 30 C 50 70 -10 110 -70 150" fill="none" stroke="#280F16" stroke-width="2" stroke-linecap="round"/>
+      <path d="M -100 110 C -140 102 -180 110 -220 103" fill="none" stroke="#280F16" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Fully Assembled Giant Sakura Branch -->
+    <g id="giantSakuraSystem">
+      <use href="#thickBranch"/>
+      
+      <!-- Populating with huge dense flower clusters -->
+      <use href="#sakuraClusterBig" transform="translate(120, -20) scale(1.6)"/>
+      <use href="#sakuraClusterBig" transform="translate(80, 20) scale(1.4)"/>
+      <use href="#sakuraClusterBig" transform="translate(10, 60) scale(1.8)"/>
+      <use href="#sakuraClusterBig" transform="translate(-70, 100) scale(1.5)"/>
+      <use href="#sakuraClusterBig" transform="translate(-150, 115) scale(1.7)"/>
+      <use href="#sakuraClusterBig" transform="translate(-230, 135) scale(1.4)"/>
+      <use href="#sakuraClusterBig" transform="translate(-290, 140) scale(1.2)"/>
+
+      <use href="#sakuraClusterBig" transform="translate(-10, 110) scale(1.6)"/>
+      <use href="#sakuraClusterBig" transform="translate(-60, 160) scale(1.4)"/>
+      <use href="#sakuraClusterBig" transform="translate(-110, 210) scale(1.7)"/>
+      <use href="#sakuraClusterBig" transform="translate(-160, 260) scale(1.3)"/>
+      <use href="#sakuraClusterBig" transform="translate(-195, 240) scale(1.1)"/>
+      
+      <use href="#sakuraClusterBig" transform="translate(-130, 95) scale(1.3)"/>
+      <use href="#sakuraClusterBig" transform="translate(-220, 85) scale(1.6)"/>
+      <use href="#sakuraClusterBig" transform="translate(-280, 75) scale(1.4)"/>
+      <use href="#sakuraClusterBig" transform="translate(-340, 50) scale(1.1)"/>
+      <use href="#sakuraClusterBig" transform="translate(-370, 60) scale(0.9)"/>
+
+      <!-- Stray blooms to soften the edges -->
+      <g fill="#FFFFFF">
+        <use href="#sakuraBloom" transform="translate(100, -40) scale(0.9)"/>
+        <use href="#sakuraBloom" transform="translate(40, -10) scale(1.1)"/>
+        <use href="#sakuraBloom" transform="translate(-40, 30) scale(0.8)"/>
+        <use href="#sakuraBloom" transform="translate(-110, 50) scale(1)"/>
+        <use href="#sakuraBloom" transform="translate(-200, 50) scale(0.9)"/>
+        <use href="#sakuraBloom" transform="translate(-270, 40) scale(0.7)"/>
+        <use href="#sakuraBloom" transform="translate(-160, 180) scale(1)"/>
+        <use href="#sakuraBloom" transform="translate(-80, 220) scale(0.8)"/>
+        <use href="#sakuraBloom" transform="translate(-240, 180) scale(1.1)"/>
+      </g>
+    </g>
+  </defs>
+
+  <!-- BACKGROUND BASE & DAY SKY -->
+  <g clip-path="url(#rounded)">
+    <rect width="1180" height="610" fill="#FDF2F8"/>
+
+    <!-- Ambient Sky Glows -->
+    <g transform="translate(170 140)" filter="url(#bigBlur)" opacity="0.5">
+      <animateTransform attributeName="transform" type="translate" values="170 140; 200 160; 160 165; 170 140" dur="16s" repeatCount="indefinite"/>
+      <circle r="260" fill="url(#glow1)"/>
+    </g>
+    <g transform="translate(708 480)" filter="url(#bigBlur)" opacity="0.5">
+      <animateTransform attributeName="transform" type="translate" values="708 480; 683 465; 723 450; 708 480" dur="20s" repeatCount="indefinite"/>
+      <circle r="300" fill="url(#glow2)"/>
+    </g>
+
+    <!-- MT FUJI (Distant Silhouette) -->
+    <g transform="translate(700, 490) scale(1.3)" opacity="0.6">
+      <use href="#mtFuji"/>
+    </g>
+
+    <!-- JAPANESE SUN & CLOUDS -->
+    <g transform="translate(850, 200)">
+      <!-- Soft Morning Sun -->
+      <circle r="120" fill="url(#sunGlow)"/>
+      <circle r="45" fill="#FFFBEB" filter="url(#softGlow)" opacity="0.95"/>
+      
+      <!-- Passing Japanese Clouds -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="-150 0; 120 -10; -150 0" dur="25s" repeatCount="indefinite"/>
+        <use href="#jpCloud" fill="#FFFFFF" opacity="0.8" transform="translate(-40, 10) scale(1.2)"/>
+      </g>
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="100 -20; -120 -15; 100 -20" dur="18s" repeatCount="indefinite"/>
+        <use href="#jpCloud" fill="#FCE7F3" opacity="0.6" transform="translate(20, -30) scale(0.9)"/>
+      </g>
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="-80 35; 90 25; -80 35" dur="22s" repeatCount="indefinite"/>
+        <use href="#jpCloud" fill="#FFFFFF" opacity="0.7" transform="translate(0, 30) scale(1)"/>
+      </g>
+    </g>
+
+    <!-- TEMPLE PAGODA & TORII (Midground) -->
+    <g transform="translate(980, 520) scale(1.2)" opacity="0.85">
+      <use href="#pagodaTemple"/>
+    </g>
+    <g transform="translate(810, 550) scale(0.9)" opacity="0.85">
+      <use href="#toriiGate"/>
+      <!-- Water Reflection Lines -->
+      <rect x="-40" y="75" width="80" height="2" fill="#F472B6" rx="1"/>
+      <rect x="-25" y="82" width="50" height="2" fill="#F472B6" rx="1"/>
+      <rect x="-10" y="89" width="20" height="2" fill="#F472B6" rx="1"/>
+    </g>
+
+    <!-- Subtle Dark Noise Overlay -->
+    <rect width="1180" height="610" filter="url(#noiseFilter)" opacity="0.25"/>
+
+    <!-- NEW DENSE SAKURA BRANCHES -->
+    <!-- Massive branch sweeping from Top Right -->
+    <g transform="translate(1180, 0) scale(1.15)">
+      <use href="#giantSakuraSystem"/>
+      
+      <!-- Hanging Chochin Lantern with subtle swing -->
+      <g transform="translate(-250, 140)">
+        <animateTransform attributeName="transform" type="rotate" values="-3 0 0; 3 0 0; -3 0 0" dur="5s" repeatCount="indefinite" additive="sum"/>
+        <use href="#chochinLantern"/>
+      </g>
+    </g>
+
+    <!-- Branch sweeping up from Bottom Left to frame the ASCII -->
+    <g transform="translate(0, 610) rotate(-35) scale(0.8)">
+      <use href="#giantSakuraSystem"/>
+    </g>
+  </g>
+
+  <!-- LEFT PANEL: ASCII TERMINAL (Glassmorphism Light) -->
+  <g clip-path="url(#leftClip)">
+    <rect x="0" y="0" width="448" height="610" fill="#FFFFFF" opacity="0.55"/>
+
+    <text x="44.0" y="77.3" class="skill-text" font-size="11" fill="#9D174D" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="0.1s" dur="0.4s" fill="freeze"/>
+      guest@sakura:~$ whoami
+    </text>
+    <text x="44.0" y="91.3" class="skill-text" font-size="11" fill="#E11D48" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.4s" fill="freeze"/>
+      &#8594; dark (@TDD788)
+    </text>
+
+    <!-- EXACT 55-LINE ASCII PORTRAIT -->
+    <g xml:space="preserve">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0"
+        dur="6s" begin="1.86s" repeatCount="indefinite"/>
+      
+      <text x="44.0" y="107.3" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.35s" dur="0.22s" fill="freeze"/>              ....:-+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#=:.....                             </text>
+      <text x="44.0" y="114.2" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.372s" dur="0.22s" fill="freeze"/>            .....:=#%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*-:.....                           </text>
+      <text x="44.0" y="121.1" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.394s" dur="0.22s" fill="freeze"/>           ....:-##%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%+-:....                          </text>
+      <text x="44.0" y="128.0" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.416s" dur="0.22s" fill="freeze"/>          ....:=*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#=:....                         </text>
+      <text x="44.0" y="134.9" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.438s" dur="0.22s" fill="freeze"/>         ...:-*#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#+:....                        </text>
+      <text x="44.0" y="141.8" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.46s" dur="0.22s" fill="freeze"/>        ...:=#%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*+*@@@@@@@@@@@@@@@@@@%*:....                       </text>
+      <text x="44.0" y="148.7" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.482s" dur="0.22s" fill="freeze"/>       ...:+%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#*=---+%@@@@@@@@@@@@@@@@@#*:....                      </text>
+      <text x="44.0" y="155.6" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.504s" dur="0.22s" fill="freeze"/>      ...:+%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#**%@@@@@@@@@@@@@@@@@%#+:....                     </text>
+      <text x="44.0" y="162.5" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.526s" dur="0.22s" fill="freeze"/>     ...:=%##%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#=:....                    </text>
+      <text x="44.0" y="169.4" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.548s" dur="0.22s" fill="freeze"/>    ...:-#+##@@@@@@@@@@@@@%*===+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#*-......                  </text>
+      <text x="44.0" y="176.3" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.57s" dur="0.22s" fill="freeze"/>    ...:*==#%@@@@@@@@@@@@@@@#+++@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#*-:..........            </text>
+      <text x="44.0" y="183.2" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.592s" dur="0.22s" fill="freeze"/>      ...:---*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#+++=::........          </text>
+      <text x="44.0" y="190.1" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.614s" dur="0.22s" fill="freeze"/>      ....-:=#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#****++*-:....         </text>
+      <text x="44.0" y="197.0" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.636s" dur="0.22s" fill="freeze"/>      ...-:-*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#***#%%#+:....        </text>
+      <text x="44.0" y="203.9" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.658s" dur="0.22s" fill="freeze"/>      ...--=#%%@@@@@@@%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*+#+:....       </text>
+      <text x="44.0" y="210.8" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.68s" dur="0.22s" fill="freeze"/>      ...:++#*#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*++#%+:....      </text>
+      <text x="44.0" y="217.7" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.702s" dur="0.22s" fill="freeze"/>      ...:+#*+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#==*@@@@@@@@@@@@@@@@%%@@@@@@@@@@%@@@%%+=+%@#*-....     </text>
+      <text x="44.0" y="224.6" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.724s" dur="0.22s" fill="freeze"/>      ...:=#++%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#-::-#@@@@@@@@@@@@@@##%@@@@@@@@#***#%*==+%@#**:..      </text>
+      <text x="44.0" y="231.5" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.746s" dur="0.22s" fill="freeze"/>      ...:+*=*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#-::-=*%@@@@@@@@@%%###%@@@@@@@#++#*+*=--+%@%##-...     </text>
+      <text x="44.0" y="238.4" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.768s" dur="0.22s" fill="freeze"/>      ...:*==+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%#==*##@@@@@@@@@@#*#*##%@@@@@@#++==+#=---+%@%#*-:..     </text>
+      <text x="44.0" y="245.3" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.79s" dur="0.22s" fill="freeze"/>      ...:*--*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#%@%@@@@@@@@%@@@%%*+*#%#@@@@@@%*++=++*---=%%%%**=:..     </text>
+      <text x="44.0" y="252.2" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.812s" dur="0.22s" fill="freeze"/>      ...:*-=#@@@@@@@@@@@@@@@@%%@@@@@@@@@@@@@%#*%%*=--=*####%%@%%*+*+#@@@@@@@#*+**==+--+%%###+#=:..     </text>
+      <text x="44.0" y="259.1" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.834s" dur="0.22s" fill="freeze"/>      ...:*-=#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@**=#-:...:--===*#%%%#*#%@@@@@@@@#*+*+==++#%#%#*#=*-:..     </text>
+      <text x="44.0" y="266.0" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.856s" dur="0.22s" fill="freeze"/>      ...:*+=%##@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*-=+:.....::--+=*%%##@@@@@@@@@@@#*+==------=#*+*-+-:..     </text>
+      <text x="44.0" y="272.9" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.878s" dur="0.22s" fill="freeze"/>       ..:=#+%++%@@@@@@@@@@@@@@@%@@@@@@@@@@%=--+:.......::---*##**@@@@@@@@@@@#*=--::..::=**+--+-...     </text>
+      <text x="44.0" y="279.8" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.22s" fill="freeze"/>       ...:+%%==*@@@@@@@@@@@@@@%##*#%@@@@%*%-+-:...........:-*%++#@@@@@@@@@@@#+=-:::.::-=+--::*:...     </text>
+      <text x="44.0" y="286.6" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.922s" dur="0.22s" fill="freeze"/>        ...:+%+=+%@@@@@@@@@@@@@%#+=+*%%%+--::.....     ....:*#%++@@@@@@@@@@@@%*=-::::::-=--:.:-...      </text>
+      <text x="44.0" y="293.6" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.944s" dur="0.22s" fill="freeze"/>         ..:-#=+*%@@@@@@@@@@@@@@%+==**%=:::.....        ..::-+#*%%@@@@@@@@@@@%*=--::::--+-:..:....      </text>
+      <text x="44.0" y="300.5" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.966s" dur="0.22s" fill="freeze"/>         ...:*::::=%@@@@@@@@@@@@@%+==#-:............    ....-+#%##@@@@@@@@@@@%*=-:..:--==:.......       </text>
+      <text x="44.0" y="307.4" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.988s" dur="0.22s" fill="freeze"/>          ..:*:...:+%@%@@@@@@@@@@@@*=:.....  ........   ...:-#%###@@@@@@@@@@@%*=-:..::=+:............   </text>
+      <text x="44.0" y="314.2" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.01s" dur="0.22s" fill="freeze"/>          ...-:...:=%@@%@@@@@@@@@@@@#-:.............  ....:-#%###%@@@@@@@@@@@@#+-:...:-*-...............</text>
+      <text x="44.0" y="321.1" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.032s" dur="0.22s" fill="freeze"/>          ....:....-+%%@@@@@@@@@@@@@@@#=-:...............:+%%###%@@@@@@@@@@@@@#+-:....:-=----+*#*-:::...</text>
+      <text x="44.0" y="328.1" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.054s" dur="0.22s" fill="freeze"/>          ........:=#%@@@@@@@@@@@@@@@@@@%*=--::.......:-%%%%###%@@@@@@@@@@@@@%*=:....:-=%#+-:::::-##=-:</text>
+      <text x="44.0" y="335.0" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.076s" dur="0.22s" fill="freeze"/>             ...:=*###%**%@@@@@@@@@@@@@@@@@@@%#*=-----*%%%%###%@@@@@@@@@@@@@@@#=-:....:-+%%*=-:::-+@@%=</text>
+      <text x="44.0" y="341.9" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.098s" dur="0.22s" fill="freeze"/>              ....::::-++*%@@@%@@@@@@@@@@@@@@@@@@@@@%%%%%%%%@@@@@@@@@@@@@@@@@@%+-:....::-+#@@%%#*#%@@@@</text>
+      <text x="44.0" y="348.8" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.12s" dur="0.22s" fill="freeze"/>                 .....:-+%%%@%%%@@@@@@@@@@@@@@@@@@@@%%@@@@@@@%%%@@@@@@@@@%@@@@@#=::..:::--=++#%@@@@@@%%</text>
+      <text x="44.0" y="355.6" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.142s" dur="0.22s" fill="freeze"/>                    ..:=++*#%%%%@@@@@@@@@@@@@@@@@@@%###%@@%####@@@@@@@@@@@@@@@@%+-:::::::---=***%@@@@@%</text>
+      <text x="44.0" y="362.6" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.164s" dur="0.22s" fill="freeze"/>                   ...:+====+#%##%@@@@@@@@@@@@@@@@%#***##****#@@@%%@@@@@@@@@@@@@%=-::::::---=+#******##</text>
+      <text x="44.0" y="369.5" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.186s" dur="0.22s" fill="freeze"/>                   ...-=----==*##@@@@@@@@@@@@@@@@%#****#****#@%%##%@@@@@@@@@@@@%#*-:::::------=+-------</text>
+      <text x="44.0" y="376.4" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.208s" dur="0.22s" fill="freeze"/>                   ...-=-----==*%@@%%#%%@@@@@@@@@#********#%%%%***#@@@@@@@@@%#%%##+-:::---------=------</text>
+      <text x="44.0" y="383.2" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.23s" dur="0.22s" fill="freeze"/>                   ...-=-----=+*%%#**##@@@@@@@@@%#*****##%%%%*++++#@@@@%@%@@%##%@@#=-------------==----</text>
+      <text x="44.0" y="390.1" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.252s" dur="0.22s" fill="freeze"/>                   ...:+----=+#%##***%@@@@@@@%%%#*****#%%#*+++==++#@@@@%*#%@%###%@@*=-------------=*==-</text>
+      <text x="44.0" y="397.0" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.274s" dur="0.22s" fill="freeze"/>                    ..:-=-==+%#**##%@@@@@@@@%#**+*****%*+======+**#%@%***#%@%#***###=--------------==+=</text>
+      <text x="44.0" y="404.0" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.296s" dur="0.22s" fill="freeze"/>                    ...:+==+%+++*%@@@@@@@@@%*+++=-==+#+----=*=---=#@@%****%@%#******+=--------------==+</text>
+      <text x="44.0" y="410.9" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.318s" dur="0.22s" fill="freeze"/>                     ..:-++#+++**#@@@@@@@@@*+===----=*+--=+--:--+%@%%##++*%@%********+=---------------=</text>
+      <text x="44.0" y="417.8" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.34s" dur="0.22s" fill="freeze"/>                     ...:+#+====+#@@@@@@@@@*==-------=-------*####%*++##+*#@%*********==---------------</text>
+      <text x="44.0" y="424.6" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.362s" dur="0.22s" fill="freeze"/>                      ..:-*====+#@@@@%##@@@*==---------::::::--==*=---=+##%@%#*********==--------------</text>
+      <text x="44.0" y="431.5" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.384s" dur="0.22s" fill="freeze"/>                       ..:+===+#@@@%***#@@##+==-----::::.....::=--:::::-=+%@@#*******##+==-------------</text>
+      <text x="44.0" y="438.5" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.406s" dur="0.22s" fill="freeze"/>                       ...:++*%@@@%*+++#%%*++***+----::......:::::::::---+#@@#*******##%+=-------------</text>
+      <text x="44.0" y="445.4" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.428s" dur="0.22s" fill="freeze"/>                       ...:+*#@@@@#+===*%#*=====-----:::...::::::-------=+#@@#*******##%#+=------------</text>
+      <text x="44.0" y="452.2" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.45s" dur="0.22s" fill="freeze"/>                       ...:=%@@@@%*+===+%*+=----------:::::::-----------=+#@@@##****###%%#+=-----------</text>
+      <text x="44.0" y="459.1" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.472s" dur="0.22s" fill="freeze"/>                      ...:-#@@@@@%+==-==+===---------------------------==+%@@@@##***###%%%*==-----=====</text>
+      <text x="44.0" y="466.0" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.494s" dur="0.22s" fill="freeze"/>                      ...:-#@@@@@@#+=----==----------------------------===*%@@@@@##**####%##+==---======</text>
+      <text x="44.0" y="473.0" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.516s" dur="0.22s" fill="freeze"/>                      ..:-%@@@@@@@#+=-----------------=======----------==+*%@@@@@@%##########+==---=====</text>
+      <text x="44.0" y="479.9" class="skill-text" font-size="6.0" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.538s" dur="0.22s" fill="freeze"/>                      ..-%@@@@@@@@#+=---------------==++++====----------==*#@@@@@@@##########*+=---====+</text>
+    </g>
+
+    <!-- Animated Presence Indicator -->
+    <g opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="1.86s" dur="0.5s" fill="freeze"/>
+      <circle cx="48.0" cy="504.75" r="3.5" fill="#E11D48">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="48.0" cy="504.75" r="3.5" fill="none" stroke="#E11D48" stroke-width="1.5">
+        <animate attributeName="r" values="3.5;12" dur="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <text x="60.0" y="508.8" class="skill-text" font-size="10.5" letter-spacing="1.5" fill="#9D174D">PRESENCE: ONLINE</text>
+    </g>
+
+    <!-- Scanning Line & Terminal Border -->
+    <rect x="0" y="0" width="448" height="3" fill="#F472B6" opacity="0.2">
+      <animate attributeName="y" values="0;610;0" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.3;0" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="447" y="0" width="1" height="610" fill="#F472B6" opacity="0.2"/>
+  </g>
+
+  <!-- RIGHT PROFILE CARD (Glassmorphism Light) -->
+  <g>
+    <!-- Card Frame -->
+    <rect x="488" y="68" width="652" height="375" rx="16" fill="#FFFFFF" opacity="0.65" stroke="#F472B6" stroke-opacity="0.2"/>
+    <rect x="488" y="68" width="652" height="38" rx="16" fill="#FCE7F3" opacity="0.9"/>
+    <rect x="488" y="90" width="652" height="16" fill="#FCE7F3" opacity="0.9"/>
+    <circle cx="510" cy="87.0" r="6" fill="#FF5F56"/><circle cx="530" cy="87.0" r="6" fill="#FFBD2E"/><circle cx="550" cy="87.0" r="6" fill="#27C93F"/>
+    <text x="814.0" y="91.0" text-anchor="middle" class="skill-text" font-size="11.5" fill="#9D174D">~/profile &#8212; &#26716;</text>
+    <rect x="488" y="106" width="652" height="1" fill="#F472B6" opacity="0.2"/>
+  </g>
+
+  <!-- Name & Handle -->
+  <text x="520" y="152" class="skill-text" font-size="26" font-weight="700" fill="#4C0519" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.5s" fill="freeze"/>
+    Hi&#160;&#128075;
+  </text>
+  <text x="520" y="196" class="skill-text" font-size="36" font-weight="800" fill="url(#accentGrad)" filter="url(#softGlow)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.85s" dur="0.5s" fill="freeze"/>
+    I&#8217;m Dark
+  </text>
+  <text x="520" y="218" class="skill-text" font-size="13" letter-spacing="0.5" fill="#831843" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.15s" dur="0.4s" fill="freeze"/>
+    @TDD788
+  </text>
+
+  <!-- Animated Typing Roles -->
+  <g>
+    <clipPath id="roleClip0">
+      <rect x="520" y="232" height="30" width="0">
+        <animate attributeName="width" keyTimes="0;0;0.05;0.14;0.175;1" values="0;0;236;236;0;0" dur="20s" begin="1.55s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <text x="520" y="254" clip-path="url(#roleClip0)" class="skill-text" font-size="20" font-weight="600" fill="#BE185D">AI Systems Architect</text>
+
+    <clipPath id="roleClip1">
+      <rect x="520" y="232" height="30" width="0">
+        <animate attributeName="width" keyTimes="0;0.2;0.25;0.34;0.375;1" values="0;0;282.4;282.4;0;0" dur="20s" begin="1.55s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <text x="520" y="254" clip-path="url(#roleClip1)" class="skill-text" font-size="20" font-weight="600" fill="#BE185D">Multi-Agent Orchestrator</text>
+
+    <clipPath id="roleClip2">
+      <rect x="520" y="232" height="30" width="0">
+        <animate attributeName="width" keyTimes="0;0.4;0.45;0.54;0.575;1" values="0;0;247.6;247.6;0;0" dur="20s" begin="1.55s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <text x="520" y="254" clip-path="url(#roleClip2)" class="skill-text" font-size="20" font-weight="600" fill="#BE185D">Generative SVG Artist</text>
+
+    <clipPath id="roleClip3">
+      <rect x="520" y="232" height="30" width="0">
+        <animate attributeName="width" keyTimes="0;0.6;0.65;0.74;0.775;1" values="0;0;236;236;0;0" dur="20s" begin="1.55s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <text x="520" y="254" clip-path="url(#roleClip3)" class="skill-text" font-size="20" font-weight="600" fill="#BE185D">Indie Game Developer</text>
+
+    <clipPath id="roleClip4">
+      <rect x="520" y="232" height="30" width="0">
+        <animate attributeName="width" keyTimes="0;0.8;0.85;0.94;0.975;1" values="0;0;236;236;0;0" dur="20s" begin="1.55s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <text x="520" y="254" clip-path="url(#roleClip4)" class="skill-text" font-size="20" font-weight="600" fill="#BE185D">Open Source Tinkerer</text>
+
+    <rect x="518" y="237" width="2.5" height="22" fill="#E11D48">
+      <animate attributeName="opacity" values="1;1;0;0" dur="0.9s" begin="1.55s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Quote & Comments -->
+  <text x="520" y="282" class="skill-text" font-size="13" font-style="italic" fill="#9D174D" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.9s" dur="0.5s" fill="freeze"/>
+    &#8220;crafting worlds in code and ink&#8221;
+  </text>
+  <text x="520" y="308" class="skill-text" font-size="12.5" fill="#B45309" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.15s" dur="0.4s" fill="freeze"/>
+    <tspan fill="#F472B6">//</tspan> building multi-agent AI systems
+  </text>
+  <text x="520" y="327" class="skill-text" font-size="12.5" fill="#B45309" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.35s" dur="0.4s" fill="freeze"/>
+    <tspan fill="#F472B6">//</tspan> crafting generative art &amp; retro worlds
+  </text>
+
+  <!-- Decorative Separator Line -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.6s" dur="0.5s" fill="freeze"/>
+    <rect x="520" y="353" width="284.0" height="1" fill="#F472B6" opacity="0.3"/>
+    <rect x="824.0" y="353" width="284.0" height="1" fill="#F472B6" opacity="0.3"/>
+    <circle cx="814.0" cy="359.0" r="3.7" fill="#E11D48" opacity="0.85"/>
+    <circle cx="808.3" cy="354.9" r="3.7" fill="#E11D48" opacity="0.85"/>
+    <circle cx="810.5" cy="348.1" r="3.7" fill="#E11D48" opacity="0.85"/>
+    <circle cx="817.5" cy="348.1" r="3.7" fill="#E11D48" opacity="0.85"/>
+    <circle cx="819.7" cy="354.9" r="3.7" fill="#E11D48" opacity="0.85"/>
+    <circle cx="814.0" cy="353" r="2.4" fill="#FCE7F3" opacity="1.00"/>
+  </g>
+
+  <!-- JAPANESE HANKO RED SEAL -->
+  <g transform="rotate(-6 1082 399)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.85s" dur="0.5s" fill="freeze"/>
+    <rect x="1060" y="377" width="44" height="44" rx="6" fill="#E11D48" opacity="0.95" filter="url(#softGlow)"/>
+    <rect x="1060" y="377" width="44" height="44" rx="6" fill="none" stroke="#9D174D" stroke-opacity="0.8" stroke-width="1.5"/>
+    <text x="1082" y="409" text-anchor="middle" font-size="26" fill="#FFF8FA">&#26716;</text>
+  </g>
+
+  <!-- SOCIAL BUTTONS: GITHUB & X -->
+  <a href="https://github.com/TDD788" target="_blank">
+    <g opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="3.05s" dur="0.35s" fill="freeze"/>
+      <circle cx="540" cy="397" r="18" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" filter="url(#softGlow)">
+        <animate attributeName="r" values="18;19;18" dur="3s" begin="3.05s" repeatCount="indefinite"/>
+      </circle>
+      <text x="540" y="401" text-anchor="middle" class="skill-text" font-size="10.5" font-weight="700" fill="#4C0519">GH</text>
+      <text x="566" y="401" class="skill-text" font-size="12" fill="#831843">GitHub</text>
+      <title>GitHub</title>
+    </g>
+  </a>
+  <a href="https://x.com/TheDarkDeath788" target="_blank">
+    <g opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="3.17s" dur="0.35s" fill="freeze"/>
+      <circle cx="690" cy="397" r="18" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" filter="url(#softGlow)">
+        <animate attributeName="r" values="18;19;18" dur="3s" begin="3.17s" repeatCount="indefinite"/>
+      </circle>
+      <text x="690" y="401" text-anchor="middle" class="skill-text" font-size="10.5" font-weight="700" fill="#4C0519">X</text>
+      <text x="716" y="401" class="skill-text" font-size="12" fill="#831843">TheDarkDeath788</text>
+      <title>TheDarkDeath788</title>
+    </g>
+  </a>
+
+  <!-- ANIMATED DRIFTING SAKURA PETALS -->
+  <g clip-path="url(#rounded)">
+    <use href="#sakuraBloomTiny" x="350" y="-30" opacity="0.8" fill="#F472B6">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 180,650" dur="14s" repeatCount="indefinite"/>
+    </use>
+    <use href="#sakuraBloomTiny" x="650" y="-10" opacity="0.6" fill="#BE185D">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 120,620" dur="17s" begin="3s" repeatCount="indefinite"/>
+    </use>
+    <use href="#sakuraBloomTiny" x="880" y="20" opacity="0.9" fill="#E11D48">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 140,590" dur="13s" begin="1.5s" repeatCount="indefinite"/>
+    </use>
+    <use href="#sakuraBloomTiny" x="1050" y="-20" opacity="0.7" fill="#F472B6">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 150,630" dur="19s" begin="5s" repeatCount="indefinite"/>
+    </use>
+    <use href="#sakuraBloomTiny" x="500" y="-15" opacity="0.8" fill="#BE185D">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 110,610" dur="15s" begin="7s" repeatCount="indefinite"/>
+    </use>
+    <use href="#sakuraBloomTiny" x="80" y="-50" opacity="0.9" fill="#F472B6">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 190,650" dur="12s" begin="4s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- DECORATIVE FRAME WITH PINK SHIMMER & SAKURA CORNERS -->
+  <g>
+    <!-- Border Lines -->
+    <rect x="6" y="6" width="1168" height="598" rx="22" fill="none" stroke="#F472B6" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect x="1" y="1" width="1178" height="608" rx="27" fill="none" stroke="#F472B6" stroke-opacity="0.2" stroke-width="1.5"/>
+    <rect x="1" y="1" width="1178" height="608" rx="27" fill="none" stroke="url(#shimmerGrad)" stroke-width="1.5"/>
+
+    <!-- Corner Sakura Flowers -->
+    <circle cx="18.0" cy="26.0" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="10.4" cy="20.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="13.3" cy="11.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="22.7" cy="11.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="25.6" cy="20.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="18" cy="18" r="3.2" fill="#FFFFFF" opacity="1"/>
+    <circle cx="1162.0" cy="26.0" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="1154.4" cy="20.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="1157.3" cy="11.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="1166.7" cy="11.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="1169.6" cy="20.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="1162" cy="18" r="3.2" fill="#FFFFFF" opacity="1"/>
+    <circle cx="18.0" cy="600.0" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="10.4" cy="594.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="13.3" cy="585.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="22.7" cy="585.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="25.6" cy="594.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="18" cy="592" r="3.2" fill="#FFFFFF" opacity="1"/>
+    <circle cx="1162.0" cy="600.0" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="1154.4" cy="594.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="1157.3" cy="585.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="1166.7" cy="585.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="1169.6" cy="594.5" r="5.0" fill="#F472B6" opacity="0.8"/><circle cx="1162" cy="592" r="3.2" fill="#FFFFFF" opacity="1"/>
+  </g>
+</svg>
